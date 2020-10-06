@@ -16,9 +16,10 @@ button {
 
 .Product {
     display: flex;
-    background-color: grey;
+    flex: 1;
+
     width: 2000px;
-    height: 700px;
+    height: 650px;
 }
 
 .product_photos {
@@ -29,6 +30,13 @@ button {
 
 .product_photos_main {
     flex: 2;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product_photos_main img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .product_photos_carousel {

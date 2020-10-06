@@ -1,0 +1,21 @@
+.Recommended {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 400px;
+}
+
+.Recommended div {
+    flex: 4;
+    border: solid;
+}
+
+.thumbnail {
+    width: 250px;
+    height: 250px;
+}
+
+button {
+    align-self: center;
+    border: none;
+}

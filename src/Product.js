@@ -7,26 +7,45 @@ function Product() {
         <div className="product_photos">
             Photo
             <div className="product_photos_main">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/61ZR8vBARFL._AC_SL1000_.jpg"/>
+                <img id="main"src="https://images-na.ssl-images-amazon.com/images/I/61ZR8vBARFL._AC_SL1000_.jpg"/>
             </div>
             <div className="product_photos_carousel">
                 <div>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61ZR8vBARFL._AC_SL1000_.jpg"/>                
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61ZR8vBARFL._AC_SL1000_.jpg" onClick={(e)=> {
+                        console.log(this)
+                        document.getElementById('main').src = e.target.src;
+                    }}/>                
                 </div>
                 <div>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71QEo3sd1zL._AC_SL1000_.jpg"/>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71QEo3sd1zL._AC_SL1000_.jpg"
+                    onClick={(e)=> {
+                        console.log(this)
+                        document.getElementById('main').src = e.target.src;
+                    }}/>
                 </div>
                     <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/61-PJB6G84L._AC_SL1000_.jpg"/>   
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/61-PJB6G84L._AC_SL1000_.jpg" onClick={(e)=> {
+                        console.log(this)
+                        document.getElementById('main').src = e.target.src;
+                    }}/>   
                     </div>
                 <div>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/718enZL0YkL._AC_SL1000_.jpg"/>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/718enZL0YkL._AC_SL1000_.jpg" onClick={(e)=> {
+                        console.log(this)
+                        document.getElementById('main').src = e.target.src;
+                    }}/>
                 </div>
                 <div>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61SDu6PgGCL._AC_SL1000_.jpg"/>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61SDu6PgGCL._AC_SL1000_.jpg" onClick={(e)=> {
+                        console.log(this)
+                        document.getElementById('main').src = e.target.src;
+                    }}/>
                 </div>
                 <div>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61VMe3BoPQL._AC_SL1000_.jpg"/>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61VMe3BoPQL._AC_SL1000_.jpg" onClick={(e)=> {
+                        console.log(this)
+                        document.getElementById('main').src = e.target.src;
+                    }}/>
                 </div>
             </div>
         </div>
