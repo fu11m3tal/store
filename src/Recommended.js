@@ -1,21 +1,36 @@
 import React from 'react';
 import './recommended.css';
+import { connect } from 'react-redux';
 
-function Recommended() {
-  return (
-    <div className="Recommended">
-      <button>{"<"}</button>
-      <div>
-        <img className="thumbnail"src="https://images-na.ssl-images-amazon.com/images/I/61ZR8vBARFL._AC_SL1000_.jpg"/>
-        <p>INJORA RC Car Body Shell 313mm Wheelbase Car Shell KIT D110 Defender Body Shell for 1/10 RC Crawler Traxxas TRX4 Axial SCX10 90046 (Orange)</p>
+import products from './data.js';
+
+class Recommended extends React.Component {
+  render() {
+    console.log(this.props.products)
+    return (
+      <div className="Recommended">
+        <button>{"<"}</button>
+        {products.map((product, index) => (
+          <div key={index} id ={index} onClick={(e) => {
+            
+            console.log(e.target.id);
+          }}>
+            <img className="thumbnail" alt="" src={product.image[0]}/>
+            <p>{product.name}</p>
+          </div>
+        ))}
+        <button>{">"}</button>
       </div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <button>{">"}</button>
-    </div>
-  );
+    );
+  }
 }
 
-export default Recommended;
+const mapStateToProps = (state) => {
+  return {
+      main: state.products[0],
+      products: state.products
+  }
+}
+
+export default connect(mapStateToProps)(Recommended);
+
